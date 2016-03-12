@@ -418,7 +418,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Bunny vs Aliens
+  m_Text: Start Game
 --- !u!222 &1504617393
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -612,7 +612,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Explosion Invasion
+  m_Text: Bunny vs Alien
 --- !u!222 &2092675255
 CanvasRenderer:
   m_ObjectHideFlags: 0
