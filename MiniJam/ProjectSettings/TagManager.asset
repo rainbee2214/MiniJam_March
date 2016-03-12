@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Alien
+  - Bunny
+  - Explosion
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
     locked: 0
   - name: Bunny
     uniqueID: 3214940413
+    locked: 0
+  - name: Explosion
+    uniqueID: 3793962179
     locked: 0

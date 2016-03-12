@@ -16,19 +16,19 @@ public class LevelLoader : MonoBehaviour
 {
     public string sceneToLoad = "Main";
     public bool allowButtonLoad = false;
-    public string loadButton = "Submit";
+    public string loadButton = "Drop";
 
     void Update()
     {
         if (allowButtonLoad && Input.GetButtonDown(loadButton))
         {
-            LoadScene();
+            GameController.controller.ChangeState(State.Level1);
         }
     }
 
-    public void LoadScene()
+    public void LoadScene(string s)
     {
-        SceneManager.LoadScene(sceneToLoad);
+        GameController.controller.ChangeState(s);
     }
 
     public void Quit()

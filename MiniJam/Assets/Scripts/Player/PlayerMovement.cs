@@ -12,17 +12,31 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector]
     public Animator anim;
 
+    float height;
+
     void Awake()
     {
+        height = transform.position.y;
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         rb2d.gravityScale = 0;
+    }
+
+    void Update()
+    {
+        Vector2 newPos = transform.position;
+        newPos.y = height;
+        transform.position = newPos;
+
+        rb2d.velocity = Vector2.zero;
+        rb2d.rotation = 0;
     }
 
     public void Move(Vector2 input)
     {
         input.y = 0;
         rb2d.MovePosition(rb2d.position + input.normalized * speed * Time.deltaTime);
+
         anim.SetBool("Idle", false);
         anim.SetFloat("X", input.x);
         //anim.SetFloat("Y", input.y);
